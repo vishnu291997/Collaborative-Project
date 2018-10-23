@@ -1,0 +1,37 @@
+<div class="panel panel-info">
+	<div class="panel-heading">
+		<b>Blog Title:</b>{{blogPost.blogTitle}}<br> 
+		<b>Posted By:</b>{{blogPost.postedBy.firstname}}&nbsp;{{blogPost.postedBy.lastname}}<br> 
+		<b>Posted on:</b>{{blogPost.postedOn| date:'dd:MM:yyyy'}}<br>
+	</div>
+	<div class="panel-body">
+		<p ng-bind-html="content">
+	</div>
+Likes : {{blogPost.likes}}<br>
+<textarea rows="3" cols="30" ng-model="commentTxt" required>
+
+</textarea><span style="color:red">{{error}}</span><br>
+<button class="btn btn-info" ng-click="addComment(blogPost,commentTxt)" >POST COMMENT</button>
+<br>
+<div ng-hide="blogComment==undefined">
+<b>{{blogComment.commentTxt}},&nbsp;commented By:-{{blogComment.commentedBy.email}},&nbsp;commentedOn:{{blogComment.commentedOn | date:'yyyy:MM:dd'}}</b>
+</div>
+<br>
+<a ng-click="getBlogComments(blogPost.id)">View All Comments</a>
+<br>
+<ul style="list-style:none">
+<li ng-repeat="blogComment in blogComments | orderBy:'-commentedOn' ">
+<b>{{blogComment.commentTxt}}</b><br>
+<b>commentedBy -
+<span ng-if="user.email!=blogComment.commentedBy.email">
+ {{blogComment.commentedBy.email}}</span>
+ <span ng-if="user.email==blogComment.commentedBy.email">
+ You 
+ </span>
+ ,commentedOn - {{blogComment.commentedOn | date:'yyyy:MM:dd:mm:ss'}}</b>
+</li>
+
+</ul>
+
+<a href="#/getblogs">Get all blogs</a>
+</div>

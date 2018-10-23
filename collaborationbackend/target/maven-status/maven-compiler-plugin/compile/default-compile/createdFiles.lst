@@ -1,0 +1,6 @@
+com\niit\collaborationdaoimpl\UserDaoImpl.class
+com\niit\collaborationbackend\ErrorClazz.class
+com\niit\collaborationconfig\DBConfig.class
+com\niit\collaborationbackend\App.class
+com\niit\collaborationdao\UserDao.class
+com\niit\collaborationbackend\User.class

@@ -1,0 +1,39 @@
+<span style="color:red">{{error.errorMsg}}</span>
+<div ng-show="user.role=='ADMIN'">
+<form>
+	<table>
+		<tr>
+			<td>Enter Job Title</td>
+			<td><input type="text" ng-model="job.jobTitle"></td>
+		</tr>
+		<tr>
+			<td>Enter Job Description</td>
+			<td><textarea ng-model="job.jobDescription" rows="3"></textarea></td>
+		</tr>
+		<tr>
+			<td>Enter Skills Required</td>
+			<td><input type="text"  ng-model="job.skillsRequired"></td>
+		</tr>
+		<tr>
+			<td>Enter Salary</td>
+			<td><input type="text" ng-model="job.salary"></td>
+		</tr>
+		<tr>
+			<td>Enter Location</td>
+			<td><input type="text" ng-model="job.location"></td>
+		</tr>
+		<tr>
+			<td>Enter Years of Experience</td>
+			<td><input type="text" ng-model="job.experience"></td>
+		</tr>
+		<tr>
+			<td>Enter Company Name </td>
+			<td><input type="text" ng-model="job.companyname"></td>
+		</tr>
+		<tr>
+			<td><button ng-click="addJob(job)">Add Job</button></td>
+		</tr>
+	</table>
+
+</form>
+</div>
