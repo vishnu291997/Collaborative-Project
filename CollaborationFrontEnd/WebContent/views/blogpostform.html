@@ -1,13 +1,35 @@
-<b>Blog Post Form</b> 
-<form>
+<style>
+.wrapper {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.form-signin {
+  max-width: 700px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+</style>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br><br><br><br>
+<div class="wrapper">
+
+<form class="form-signin"s>
 <table>
+<b><h1><center>Blog Post Form</center></h1></b> 
 <tr>
 <td>Enter Blog Title</td>
 <td><input type="text" ng-model="blog.blogTitle"></td>
 </tr>
 <tr>
 <td>Enter blog content</td>
-<td><textarea ng-model="blog.blogContent"></textarea></td>
+<td><textarea ng-model="blog.blogContent"  rows="10" cols="60"></textarea></td>
 </tr>
 <tr>
 <td>
@@ -19,3 +41,4 @@
 
 
 </form>
+</div>
